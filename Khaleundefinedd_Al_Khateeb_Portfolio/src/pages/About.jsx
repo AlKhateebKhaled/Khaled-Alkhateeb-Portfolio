@@ -1,33 +1,118 @@
-import React from 'react';
+import React from "react";
+import SkillCard from "../components/SkillCard";
+import { motion } from "framer-motion";
+
+const skills = [
+  {
+    name: "JavaScript (ES6+)",
+    description: "Programming language for web development.",
+    icon: "https://img.icons8.com/color/48/000000/javascript.png",
+  },
+  {
+    name: "HTML5",
+    description: "Markup language for structuring web content.",
+    icon: "https://img.icons8.com/color/48/000000/html-5.png",
+  },
+  {
+    name: "CSS3",
+    description: "Stylesheet language for designing web pages.",
+    icon: "https://img.icons8.com/color/48/000000/css3.png",
+  },
+  {
+    name: "Node.js",
+    description: "Backend runtime for JavaScript.",
+    icon: "https://img.icons8.com/color/48/000000/nodejs.png",
+  },
+  {
+    name: "Express.js",
+    description: "Backend web application framework for Node.js.",
+    icon: "https://img.icons8.com/color/48/000000/express.png",
+  },
+  {
+    name: "MongoDB",
+    description: "NoSQL database.",
+    icon: "https://img.icons8.com/color/48/000000/mongodb.png",
+  },
+  {
+    name: "PostgreSQL",
+    description: "Relational database.",
+    icon: "https://img.icons8.com/color/48/000000/postgreesql.png",
+  },
+  {
+    name: "React.js",
+    description: "Frontend framework for building UI.",
+    icon: "https://img.icons8.com/color/48/000000/react-native.png",
+  },
+  {
+    name: "Redux",
+    description: "State management library.",
+    icon: "https://img.icons8.com/color/48/000000/redux.png",
+  },
+  {
+    name: "Tailwind CSS",
+    description: "Utility-first CSS framework.",
+    icon: "https://img.icons8.com/color/48/000000/css3.png",
+  },
+  {
+    name: "Bootstrap",
+    description: "CSS framework for responsive web design.",
+    icon: "https://img.icons8.com/color/48/000000/bootstrap.png",
+  },
+  {
+    name: "Material-UI",
+    description: "React component library for modern design.",
+    icon: "https://img.icons8.com/color/48/000000/material-ui.png",
+  },
+];
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-gray-100 px-6 py-10 text-center">
-      <h1 className="text-4xl font-bold text-gray-800">About Me</h1>
-      <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
-        I’m a Full Stack Developer passionate about building dynamic web applications using the MERN and PERN stacks.
-        I discovered my love for coding during an intensive bootcamp at Meraki Academy, where I learned to design and develop Full Stack applications from scratch.
-        Before transitioning to software development, I spent six years as a Mechanical Engineer, building my skills in systems analysis, project management, and teamwork.
-        I’m excited to collaborate with diverse teams, contribute to meaningful projects, and continue growing as a developer.
-      </p>
-      <div className="mt-8">
-        <h2 className="text-2xl font-bold text-gray-800">Skills</h2>
-        <div className="mt-4 grid grid-cols-2 md:grid-cols-3 gap-6">
-          {[
-            { name: "React.js", icon: "https://img.icons8.com/color/48/000000/react-native.png" },
-            { name: "Node.js", icon: "https://img.icons8.com/color/48/000000/nodejs.png" },
-            { name: "MongoDB", icon: "https://img.icons8.com/color/48/000000/mongodb.png" },
-            { name: "PostgreSQL", icon: "https://img.icons8.com/color/48/000000/postgreesql.png" },
-            { name: "Redux", icon: "https://img.icons8.com/color/48/000000/redux.png" },
-            { name: "Tailwind CSS", icon: "https://img.icons8.com/color/48/000000/css3.png" },
-          ].map((skill, index) => (
-            <div key={index} className="flex flex-col items-center">
-              <img src={skill.icon} alt={skill.name} />
-              <p className="mt-2 text-sm text-gray-800">{skill.name}</p>
-            </div>
-          ))}
-        </div>
-      </div>
+    <div className="relative min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white px-6 py-16 overflow-hidden">
+
+
+      <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full blur-3xl opacity-30 -z-10"></div>
+      <div className="absolute bottom-0 right-0 w-72 h-72 bg-purple-500 rounded-full blur-3xl opacity-20 -z-10"></div>
+
+      <motion.div
+        className="max-w-4xl mx-auto text-center"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <h1 className="text-5xl font-extrabold">About Me</h1>
+        <p className="mt-6 text-lg text-gray-600 dark:text-gray-300">
+          I’m a Full Stack Developer passionate about building dynamic web
+          applications using the MERN and PERN stacks. I’m excited to
+          collaborate with diverse teams, contribute to meaningful projects, and
+          continue growing as a developer.
+        </p>
+      </motion.div>
+
+      <motion.div
+        className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5, duration: 1 }}
+      >
+        {skills.map((skill, index) => (
+          <SkillCard key={index} skill={skill} />
+        ))}
+      </motion.div>
+
+      <motion.div
+        className="mt-16 text-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1 }}
+      >
+        <a
+          href="/projects"
+          className="relative inline-block px-6 py-3 font-semibold text-white bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg shadow-lg hover:scale-105 transition-transform group"
+        >
+          <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-500 to-purple-500 blur-lg opacity-50 group-hover:opacity-100 transition-opacity"></span>
+          <span className="relative z-10">Explore My Projects</span>
+        </a>
+      </motion.div>
     </div>
   );
 };
