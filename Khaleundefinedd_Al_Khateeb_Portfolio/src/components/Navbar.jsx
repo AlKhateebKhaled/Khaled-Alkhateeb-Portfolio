@@ -35,14 +35,16 @@ const Navbar = () => {
   };
 
   return (
-    <nav
-      className={`transition-all duration-300 shadow-lg ${
-        isDarkMode
-          ? "bg-gray-900 text-white border-b border-gray-700"
-          : "bg-gray-50 text-gray-900 border-b border-gray-200 shadow-md"
-      }`}
-    >
+<nav
+  className={`sticky top-0 z-50 transition-all duration-300 shadow-lg ${
+    isDarkMode
+      ? "bg-gray-900 text-white border-b border-gray-700"
+      : "bg-gradient-to-r from-white via-gray-100 to-gray-200 text-gray-800 border-b border-gray-300"
+  }`}
+>
+
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
+        {/* Logo */}
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
@@ -55,6 +57,7 @@ const Navbar = () => {
           </h1>
         </motion.div>
 
+        {/* Links for Desktop */}
         <div className="hidden md:flex space-x-8">
           {["Home", "About", "Projects", "Contact"].map((link) => (
             <Link
@@ -63,7 +66,7 @@ const Navbar = () => {
               className={`font-semibold text-lg ${
                 isDarkMode
                   ? "hover:text-blue-400"
-                  : "hover:text-blue-600 text-gray-700"
+                  : "hover:text-blue-600 text-gray-800"
               } transition`}
             >
               {link}
@@ -71,6 +74,7 @@ const Navbar = () => {
           ))}
         </div>
 
+        {/* Theme Toggle Button */}
         <div
           onClick={toggleTheme}
           className="relative flex items-center justify-between w-20 h-10 bg-gray-700 dark:bg-gray-600 rounded-full cursor-pointer ml-4 shadow-lg"
@@ -96,6 +100,7 @@ const Navbar = () => {
           </div>
         </div>
 
+        {/* Hamburger Menu for Mobile */}
         <button
           className="md:hidden focus:outline-none ml-4"
           onClick={toggleMenu}
@@ -130,7 +135,7 @@ const Navbar = () => {
           className={`md:hidden ${
             isDarkMode
               ? "bg-gray-800 text-white"
-              : "bg-gray-50 text-gray-900"
+              : "bg-gray-100 text-gray-800"
           }`}
         >
           <ul className="space-y-6 text-center py-6">
