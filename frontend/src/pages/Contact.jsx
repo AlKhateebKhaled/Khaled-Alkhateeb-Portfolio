@@ -24,7 +24,7 @@ const Contact = () => {
         className="mt-10 space-y-6 text-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.9, delay: 0.5 }}
+        transition={{ duration: 0.8, delay: 0.5 }}
       >
         {/* Email */}
         <motion.div
