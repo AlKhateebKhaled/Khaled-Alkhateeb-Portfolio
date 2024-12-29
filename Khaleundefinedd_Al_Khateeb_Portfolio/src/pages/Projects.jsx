@@ -1,40 +1,109 @@
-import React from 'react';
-import ProjectCard from '../components/ProjectCard';
+import React from "react";
+import ProjectCard from "../components/ProjectCard";
 
 const projects = [
   {
-    name: 'E-Commerce Platform Website',
-    description: 'A full-stack e-commerce platform built with the PERN stack.',
+    name: "SmartCart",
+    description: "A full-stack e-commerce platform built with the PERN stack.",
     technologies: [
-      { name: "JavaScript", icon: "https://img.icons8.com/color/48/000000/javascript.png" },
-      { name: "Node.js", icon: "https://img.icons8.com/color/48/000000/nodejs.png" },
-      { name: "Express.js", icon: "https://img.icons8.com/color/48/000000/express.png" },
-      { name: "PostgreSQL", icon: "https://img.icons8.com/color/48/000000/postgreesql.png" },
-      { name: "React.js", icon: "https://img.icons8.com/color/48/000000/react-native.png" },
-      { name: "Redux", icon: "https://img.icons8.com/color/48/000000/redux.png" },
+      {
+        name: "JavaScript",
+        icon: "https://img.icons8.com/color/48/000000/javascript.png",
+      },
+      {
+        name: "Node.js",
+        icon: "https://img.icons8.com/color/48/000000/nodejs.png",
+      },
+      {
+        name: "Express.js",
+        icon: "https://img.icons8.com/color/48/000000/express.png",
+      },
+      {
+        name: "PostgreSQL",
+        icon: "https://img.icons8.com/color/48/000000/postgreesql.png",
+      },
+      {
+        name: "React.js",
+        icon: "https://img.icons8.com/color/48/000000/react-native.png",
+      },
+      {
+        name: "Redux",
+        icon: "https://img.icons8.com/color/48/000000/redux.png",
+      },
       { name: "CSS3", icon: "https://img.icons8.com/color/48/000000/css3.png" },
-      { name: "Bootstrap", icon: "https://img.icons8.com/color/48/000000/bootstrap.png" },
+      {
+        name: "Bootstrap",
+        icon: "https://img.icons8.com/color/48/000000/bootstrap.png",
+      },
     ],
-    link: '',
-    code: 'https://github.com/TekTitans/MERAKI_Academy_Project_5',
-    image: 'https://res.cloudinary.com/drhborpt0/image/upload/v1735353834/DALL_E_2024-12-28_05.43.35_-_A_highly_professional_and_elegant_logo_design_for_an_e-commerce_platform_named_SmartCart._The_design_features_a_sleek_and_modern_shopping_cart_icon_yjwelx.webp',
+    link: "",
+    code: "https://github.com/TekTitans/MERAKI_Academy_Project_5",
+    image:
+      "https://res.cloudinary.com/drhborpt0/image/upload/v1735353834/DALL_E_2024-12-28_05.43.35_-_A_highly_professional_and_elegant_logo_design_for_an_e-commerce_platform_named_SmartCart._The_design_features_a_sleek_and_modern_shopping_cart_icon_yjwelx.webp",
   },
   {
-    name: 'Football Jerseys E-Commerce Website',
-    description: 'An e-commerce platform for football jerseys using the MERN stack.',
+    name: "FORZA",
+    description:
+      "An e-commerce platform for football jerseys using the MERN stack.",
     technologies: [
-      { name: "JavaScript", icon: "https://img.icons8.com/color/48/000000/javascript.png" },
-      { name: "Node.js", icon: "https://img.icons8.com/color/48/000000/nodejs.png" },
-      { name: "Express.js", icon: "https://img.icons8.com/color/48/000000/express.png" },
-      { name: "MongoDB", icon: "https://img.icons8.com/color/48/000000/mongodb.png" },
-      { name: "React.js", icon: "https://img.icons8.com/color/48/000000/react-native.png" },
-      { name: "Redux", icon: "https://img.icons8.com/color/48/000000/redux.png" },
+      {
+        name: "JavaScript",
+        icon: "https://img.icons8.com/color/48/000000/javascript.png",
+      },
+      {
+        name: "Node.js",
+        icon: "https://img.icons8.com/color/48/000000/nodejs.png",
+      },
+      {
+        name: "Express.js",
+        icon: "https://img.icons8.com/color/48/000000/express.png",
+      },
+      {
+        name: "MongoDB",
+        icon: "https://img.icons8.com/color/48/000000/mongodb.png",
+      },
+      {
+        name: "React.js",
+        icon: "https://img.icons8.com/color/48/000000/react-native.png",
+      },
+      {
+        name: "Redux",
+        icon: "https://img.icons8.com/color/48/000000/redux.png",
+      },
       { name: "CSS3", icon: "https://img.icons8.com/color/48/000000/css3.png" },
-      { name: "Bootstrap", icon: "https://img.icons8.com/color/48/000000/bootstrap.png" },
+      {
+        name: "Bootstrap",
+        icon: "https://img.icons8.com/color/48/000000/bootstrap.png",
+      },
     ],
-    link: 'https://forzajerseys.netlify.app/',
-    code: 'https://github.com/AlKhateebKhaled/MERAKI_Academy_Project_4',
-    image: 'https://res.cloudinary.com/drhborpt0/image/upload/v1735352368/Logo_c0cb5u.png',
+    link: "https://forzajerseys.netlify.app/",
+    code: "https://github.com/AlKhateebKhaled/MERAKI_Academy_Project_4",
+    image:
+      "https://res.cloudinary.com/drhborpt0/image/upload/v1735352368/Logo_c0cb5u.png",
+  },
+  {
+    name: "KMDB",
+    description:
+      "Movies App,dynamic single-page application to browse, search, filter, and interact with movies.",
+    technologies: [
+      {
+        name: "JavaScript",
+        icon: "https://img.icons8.com/color/48/000000/javascript.png",
+      },
+      {
+        name: "HTML5",
+        icon: "https://img.icons8.com/color/48/000000/html-5.png",
+      },
+      { name: "CSS3", icon: "https://img.icons8.com/color/48/000000/css3.png" },
+      {
+        name: "jQuery",
+        icon: "https://img.icons8.com/ios/50/000000/jquery.png",
+      },
+    ],
+    link: "https://effervescent-meerkat-695475.netlify.app/",
+    code: "https://github.com/AlKhateebKhaled/MERAKI_Academy_Project_2.git",
+    image:
+      "https://res.cloudinary.com/drhborpt0/image/upload/v1735484920/KMDB_gpeig1.webp",
   },
 ];
 
