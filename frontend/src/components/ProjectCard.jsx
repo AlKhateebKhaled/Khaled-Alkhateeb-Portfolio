@@ -7,11 +7,8 @@ const ProjectCard = ({ project }) => {
       className="relative bg-gradient-to-tr from-white to-gray-100 dark:from-gray-700 dark:to-gray-800 rounded-xl p-1 shadow-2xl"
       whileHover={{ scale: 1.05 }}
     >
-      {/* Card Content */}
       <div className="relative bg-gradient-to-tr from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-lg shadow-lg overflow-hidden h-full">
-        {/* Project Details */}
         <div className="p-6">
-          {/* Project Header */}
           <motion.div
             className="flex items-center space-x-4"
             initial={{ opacity: 0, x: -50 }}
@@ -36,7 +33,6 @@ const ProjectCard = ({ project }) => {
             </h2>
           </motion.div>
 
-          {/* Description */}
           <motion.p
             className="text-lg font-medium text-gray-800 dark:text-gray-300 mt-4"
             initial={{ opacity: 0, y: 20 }}
@@ -46,9 +42,8 @@ const ProjectCard = ({ project }) => {
             {project.description}
           </motion.p>
 
-          {/* Technologies */}
           <motion.div
-            className="mt-6"
+            className="mt-6 mb-16"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -78,16 +73,14 @@ const ProjectCard = ({ project }) => {
             </div>
           </motion.div>
 
-          {/* Buttons */}
           <motion.div
-            className="mt-6 flex justify-center space-x-4"
+            className="absolute bottom-4 left-0 right-0 flex justify-center space-x-4 mt-10"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
             <motion.div whileTap={{ scale: 0.95 }}>
               <a
-                whileTap={{ scale: 0.95 }}
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -96,7 +89,6 @@ const ProjectCard = ({ project }) => {
                 View Project
               </a>
             </motion.div>
-            {/* GitHub Code Button */}
 
             <motion.div whileTap={{ scale: 0.95 }}>
               <a

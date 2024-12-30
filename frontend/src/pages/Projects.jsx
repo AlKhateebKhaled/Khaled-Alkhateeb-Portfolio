@@ -4,7 +4,7 @@ import ProjectCard from "../components/ProjectCard";
 const projects = [
   {
     name: "SmartCart",
-    description: "A full-stack e-commerce platform built with the PERN stack.",
+    description: "SmartCart is a full-stack e-commerce platform allows users to register as customers, sellers, or admins, giving them personalized access to browse products, make purchases, and manage inventories. The platform incorporates role-based functionality for secure access control and includes dedicated dashboards for admins and sellers. SmartCart is designed for seamless interactions across all user roles",
     technologies: [
       {
         name: "JavaScript",
@@ -44,7 +44,7 @@ const projects = [
   {
     name: "FORZA",
     description:
-      "An e-commerce platform for football jerseys using the MERN stack.",
+      "FORZA is a full-stack e-commerce website designed for football jersey enthusiasts. Users can easily explore a variety of jerseys, add items to their cart, and complete purchases seamlessly. Registered users can take advantage of additional features, including rating products, adding items to their watchlist, and managing their cart for future purchases. FORZA aims to provide a smooth and engaging shopping experience for football fans.",
     technologies: [
       {
         name: "JavaScript",
@@ -84,7 +84,7 @@ const projects = [
   {
     name: "KMDB",
     description:
-      "Movies App,dynamic single-page application to browse, search, filter, and interact with movies.",
+      "Movies App, dynamic single-page application to Browse, Search, Filter, Rate and interact with movies.",
     technologies: [
       {
         name: "JavaScript",
@@ -104,6 +104,26 @@ const projects = [
     code: "https://github.com/AlKhateebKhaled/MERAKI_Academy_Project_2.git",
     image:
       "https://res.cloudinary.com/drhborpt0/image/upload/v1735484920/KMDB_gpeig1.webp",
+  },
+  {
+    name: "Hangman Game",
+    description:
+      "Hangman Game is a fun and interactive word-guessing game where players try to reveal the hidden word by selecting letters. It features multiple difficulty levels, a helpful hint system, and a progress tracker to enhance gameplay.",
+    technologies: [
+      {
+        name: "JavaScript",
+        icon: "https://img.icons8.com/color/48/000000/javascript.png",
+      },
+      {
+        name: "HTML5",
+        icon: "https://img.icons8.com/color/48/000000/html-5.png",
+      },
+      { name: "CSS3", icon: "https://img.icons8.com/color/48/000000/css3.png" },
+    ],
+    link: "https://alkhateebkhaled.github.io/MERAKI_Academy_Project_1/",
+    code: "https://github.com/AlKhateebKhaled/MERAKI_Academy_Project_1.git",
+    image:
+      "https://res.cloudinary.com/drhborpt0/image/upload/v1735521255/Hangman_nj55kb.webp",
   },
 ];
 

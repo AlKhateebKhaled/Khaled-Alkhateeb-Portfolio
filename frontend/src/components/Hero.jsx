@@ -1,5 +1,9 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
+import Typewriter from "typewriter-effect";
+import Particles from "react-tsparticles";
+import Timeline from "./Timeline";
+
 
 const Hero = () => {
   useEffect(() => {
@@ -12,27 +16,48 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative flex items-center justify-center h-full transition-all duration-500 bg-gradient-to-br from-gray-100 via-gray-200 to-gray-400 dark:from-blue-900 dark:via-black dark:to-gray-900 ">
-      <motion.h1
-        className="text-6xl md:text-8xl font-extrabold dark:text-white text-gray-800 transition-colors duration-500"
-        initial={{ opacity: 0, y: -100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        Hi, I'm Khaled
-      </motion.h1>
-
-      <motion.p
-        className="text-lg md:text-2xl dark:text-gray-300 text-gray-600 mt-4 transition-colors duration-500"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5, duration: 1 }}
-      >
-        Full Stack Developer | Creative Innovator
-      </motion.p>
-      <div
-        className="absolute inset-0 bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300 dark:from-blue-700 dark:via-purple-800 dark:to-pink-700 opacity-30 blur-3xl z-0 not-dark:block hidden"
-      ></div>
+    <div className="relative flex items-center justify-center h-full bg-gradient-to-br from-gray-100 via-gray-200 to-gray-400 dark:from-blue-900 dark:via-black dark:to-gray-900">
+      <Particles
+        className="absolute inset-0 z-0"
+        options={{
+          particles: {
+            number: { value: 50 },
+            size: { value: 3 },
+            move: { speed: 2 },
+            color: { value: "#ffffff" },
+            line_linked: { enable: true, distance: 150 },
+          },
+        }}
+      />
+      <div className="relative z-10 text-center">
+        <motion.h1
+          className="text-[clamp(2rem,5vw,4rem)] font-extrabold dark:text-white text-gray-800"
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          Hi, I'm Khaled
+        </motion.h1>
+        <motion.p
+          className="text-lg md:text-2xl dark:text-gray-300 text-gray-600 mt-4"
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 1 }}
+        >
+          <Typewriter
+            options={{
+              strings: [
+                "Full Stack Developer",
+                "Creative Innovator",
+                "Problem Solver",
+              ],
+              autoStart: true,
+              loop: true,
+              delay: 50,
+            }}
+          />
+        </motion.p>
+      </div>
 
     </div>
   );

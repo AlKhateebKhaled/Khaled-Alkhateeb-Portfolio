@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import DownloadResumeButton from "./DownloadResumeButton";
 
 const Footer = () => {
   useEffect(() => {
@@ -13,7 +14,6 @@ const Footer = () => {
 
   return (
     <footer className="flex-none transition-all duration-500 bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 dark:from-gray-900 dark:via-black dark:to-gray-800 text-gray-800 dark:text-gray-300 border-t border-gray-400 dark:border-gray-700 py-6 text-center">
-
       <p className="text-sm">
         © {new Date().getFullYear()} Khaled Al-Khateeb. All rights reserved.
       </p>
@@ -44,6 +44,8 @@ const Footer = () => {
           <span>Email</span>
         </a>
       </div>
+      <DownloadResumeButton />
+
     </footer>
   );
 };

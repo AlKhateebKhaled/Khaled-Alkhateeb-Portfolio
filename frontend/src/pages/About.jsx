@@ -1,6 +1,7 @@
 import React from "react";
 import SkillCard from "../components/SkillCard";
 import { motion } from "framer-motion";
+import Timeline from "../components/Timeline";
 
 const skills = [
   {
@@ -88,8 +89,10 @@ const About = () => {
         </p>
       </motion.div>
 
+      <div className="my-8 border-t-2 border-gray-300"></div>
+      <h3 className="text-4xl font-semibold text-center mb-1">Skills</h3>
       <motion.div
-        className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"
+        className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 1 }}
@@ -99,20 +102,9 @@ const About = () => {
         ))}
       </motion.div>
 
-      <motion.div
-        className="mt-16 text-center"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1 }}
-      >
-        <a
-          href="/projects"
-          className="relative inline-block px-6 py-3 font-semibold text-white bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg shadow-lg hover:scale-105 transition-transform group"
-        >
-          <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-500 to-purple-500 blur-lg opacity-50 group-hover:opacity-100 transition-opacity"></span>
-          <span className="relative z-10">Explore My Projects</span>
-        </a>
-      </motion.div>
+   
+      <Timeline />
+
     </div>
   );
 };
