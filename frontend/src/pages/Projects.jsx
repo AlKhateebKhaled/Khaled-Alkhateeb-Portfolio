@@ -36,7 +36,7 @@ const projects = [
         icon: "https://img.icons8.com/color/48/000000/bootstrap.png",
       },
     ],
-    link: "",
+    link: "https://smartcart-tektitans.netlify.app/",
     code: "https://github.com/TekTitans/MERAKI_Academy_Project_5",
     image:
       "https://res.cloudinary.com/drhborpt0/image/upload/v1735353834/DALL_E_2024-12-28_05.43.35_-_A_highly_professional_and_elegant_logo_design_for_an_e-commerce_platform_named_SmartCart._The_design_features_a_sleek_and_modern_shopping_cart_icon_yjwelx.webp",
