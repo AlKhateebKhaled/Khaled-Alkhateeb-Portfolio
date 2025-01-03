@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 import {
   VerticalTimeline,
@@ -101,13 +102,13 @@ const Timeline = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
       >
-        <a
-          href="/projects"
+       <Link
+              to={`/projects`}
           className="relative inline-block px-6 py-3 font-semibold text-white bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg shadow-lg hover:scale-105 transition-transform group"
         >
           <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-500 to-purple-500 blur-lg opacity-50 group-hover:opacity-100 transition-opacity"></span>
           <span className="relative z-10">Explore My Projects</span>
-        </a>
+        </Link>
       </motion.div>
 
       <VerticalTimeline>
